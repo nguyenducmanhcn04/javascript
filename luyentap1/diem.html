@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kiemtra = +prompt("nhap diem kiem tra: ")
+        let giuaki = +prompt("nhap diem giuaki: ")
+        let cuoiki = +prompt("nhap diem cuoiki: ")
+        let tongdiem = (kiemtra + giuaki + cuoiki) / 3;
+        if (tongdiem >= 8) {
+            alert("gioi")
+        } else if (tongdiem < 5) {
+            alert("yeu")
+        } else {
+            alert("kha")
+        }
+    </script>
+</body>
+</html>

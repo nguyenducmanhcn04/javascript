@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://c.wallhere.com/photos/81/e4/Dragon_Ball_anime_Son_Goku-84197.png!d" style="width: 200px; position: relative; top: 0; left: 0;" id="x" alt="">
+    <script>
+        let anh = document.getElementById('x');
+        let vantoc = 5;
+        setInterval(()=> {
+            anh.style.left = parseInt(anh.style.left) + vantoc + 'px';
+                if(parseInt(anh.style.left) > window.innerWidth - 200 || parseInt(anh.style.left)<0) {
+                    vantoc = -vantoc;
+            }
+        }, 1)
+    </script>
+</body>
+</html>
