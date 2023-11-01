@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form>
+        <input type="text" id="number1" placeholder="Nhập số thứ nhất">
+        <input type="text" id="number2" placeholder="Nhập số thứ hai"><br>
+        <button type="button" onclick="add()">Cộng</button>
+        <button type="button" onclick="subtract()">Trừ</button>
+        <button type="button" onclick="multiply()">Nhân</button>
+        <button type="button" onclick="divide()">Chia</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function add() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            const result = number1 + number2;
+            document.getElementById('result').innerHTML = `Kết quả: ${number1} + ${number2} = ${result}`;
+        }
+    
+        function subtract() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            const result = number1 - number2;
+            document.getElementById('result').innerHTML = `Kết quả: ${number1} - ${number2} = ${result}`;
+        }
+    
+        function multiply() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            const result = number1 * number2;
+            document.getElementById('result').innerHTML = `Kết quả: ${number1} * ${number2} = ${result}`;
+        }
+    
+        function divide() {
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+    
+            if (number2 === 0) {
+                document.getElementById('result').innerHTML = 'Không thể chia cho 0.';
+            } else {
+                const result = number1 / number2;
+                document.getElementById('result').innerHTML = `Kết quả: ${number1} / ${number2} = ${result}`;
+            }
+        }
+    </script>
+    
+</body>
+</html>

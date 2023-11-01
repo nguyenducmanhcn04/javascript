@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <label for="Amount">Amount</label>
+            </th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="Amount"></td>
+            <td>
+                <select name="From" id="From">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="To" id="To">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="ChangeMoney()">Convert</button>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        function ChangeMoney() {
+            const amount = parseFloat(document.getElementById('Amount').value);
+            const fromCurrency = document.getElementById('From').value;
+            const toCurrency = document.getElementById('To').value;
+
+            // Tính toán giá trị chuyển đổi (sử dụng giả định tỷ giá 1 USD = 23000 VND)
+            let result;
+            if (fromCurrency === 'USD' && toCurrency === 'VND') {
+                result = amount * 23000;
+            } else if (fromCurrency === 'VND' && toCurrency === 'USD') {
+                result = amount / 23000;
+            } else {
+                result = 'Không hỗ trợ chuyển đổi này';
+            }
+
+            document.getElementById('result').innerHTML = `Result: ${amount} ${fromCurrency} = ${result} ${toCurrency}`;
+        }
+    </script>
+</body>
+</html>
