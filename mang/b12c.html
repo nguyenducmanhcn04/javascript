@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [43, 54, 32, 46, 24, 18]
+        let tongchan = 0;
+        let tongle = 0;
+        for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 0) {
+          tongchan += arr[i];
+        } else {
+          tongle += arr[i];
+        }
+      }
+      if(tongchan > tongle) {
+        console.log("tong chan lon hon");
+      } else {
+        console.log("tong le lon hon");
+      }
+    </script>
+</body>
+</html>

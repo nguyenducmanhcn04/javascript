@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let phantu = [1, 3, 4, 24 , 45];
+        // let tong = 0;
+        // for (let i = 0; i < phantu.length; i++) {
+        //     if (phantu[i] < 5) {
+        //         tong += phantu[i];
+        //     }
+        // }
+        // console.log(tong);
+
+        // let phantu = [2, 6, 8, 9, 12];
+        // let dem = 0;
+        // for (let i = 0; i < phantu.length; i++) {
+        //     if (phantu[i] % 3 == 0) {
+        //         console.log(phantu[i]);
+        //         dem++;
+        //     }
+        // }
+        // console.log("so phan tu chia het cho 3: ", dem);
+        
+        // let phantu = [2, 5, 18, 5, 10];
+        // let max = 0;
+        // for (let i = 1; i < phantu.length; i++) {
+        //     if (max < phantu[i]) {
+        //         max = phantu[i];
+        //     }
+        // }
+        // console.log(max);
+
+        // let phantu = [12, 3, 54, 6, 2];
+        // let nhap = +prompt("nhap vao so x: ");
+        // for(let i = 0; i < phantu.length; i++) {
+        //     if(phantu[i] == x) {
+        //         console.log("vi tri trong mang la: ", i);
+        //     } 
+        // }
+
+        // let phantu = [20, 12, 34, 4, 54];
+        // let max = 0;
+        // let max2 = 0;
+        // for(let i = 1; i < phantu.length; i++) {
+        //     if(max < phantu[i]) {
+        //         max = phantu[i];
+        //     }
+        //     if(max2 < phantu[i] && max2 < max) {
+        //         max2 = phantu[i];
+        //     }
+        // }
+        // console.log(max2);
+
+        let arr = [];
+        let n = +prompt("nhap vao so phan tu trong mang: ");
+        
+        while(arr.length < n) {
+            arr.push(+prompt('nhap vao phan tu thu: ', i));
+        }
+        alert(arr.length);
+        let x = +prompt("nhap vao gia tri x")
+        let vitri = arr.indexOf(x);
+        if (vitri !== -1) {
+            arr.splice(vitri, 1);
+        }
+        
+    </script>
+</body>
+</html>

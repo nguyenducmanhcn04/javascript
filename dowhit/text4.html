@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("nhap vao so a: ")
+        let b = +prompt("nhap vao so b: ")
+        for (; a <= b; a++) {
+            if(a % 3 == 0 && a % 5 != 0) {
+                document.write("Fixx<br>")
+            }
+            if(a % 5 == 0 && a % 3 != 0) {
+                document.write("buzz<br>")
+            }
+            if (a % 3 == 0 && a % 5 == 0) {
+                document.write("FizzBuzz<br>")
+            }
+            if (a % 3 != 0 && a % 5 != 0) {
+                document.write(a + '<br>')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = +prompt("nhap vao so x: ")
+        let y = +prompt("nhap vao so y: ")
+        let s, p;
+        if (x >= y) {
+            s = y;
+            p = (x-y)/2;
+        } else if (y > x) {
+            s = x;
+            p = (y-x)/2;
+        }
+        document.write("so cap nam nu: ", s);
+        document.write("so cap dong gioi: ", p);
+        
+    </script>
+</body>
+</html>
